@@ -29,18 +29,18 @@ namespace BE.MathTasks.TimesTables
             return tasks.Where(x => x.B.Equals(table)).ToList();
         }
 
-        public Task<MultiplicationTask> RandomTask(MultiplicationTaskRequest request)
+        public MultiplicationTask RandomTask(MultiplicationTaskRequest request)
         {
             MultiplicationTask item = tasks.Where(x => request.Tables.Contains(x.B)).ToList().RandomItem();
 
-            return Task.FromResult(item);
+            return item;
         }
 
-        public Task<List<MultiplicationTask>> RandomTasks(MultiplicationTaskRequest request, int count)
+        public List<MultiplicationTask> RandomTasks(MultiplicationTaskRequest request, int count)
         {
             List<MultiplicationTask> item = tasks.Where(x => request.Tables.Contains(x.B)).Shuffle().Take(count).ToList();
 
-            return Task.FromResult(item);
+            return item;
         }
     }
 }
