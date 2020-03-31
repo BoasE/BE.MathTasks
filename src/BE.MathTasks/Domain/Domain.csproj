@@ -7,8 +7,8 @@
         <PackageIdpopopp>BE.MathTasks</PackageIdpopopp>
         <LangVersion>8</LangVersion>
         <Nullable>enable</Nullable>
-        <PackageReleaseNotes>Inital Version</PackageReleaseNotes>
-        <PackageVersion>0.0.2-alpha</PackageVersion>
+        <PackageReleaseNotes>Core-Tasks are marked</PackageReleaseNotes>
+        <PackageVersion>0.0.3</PackageVersion>
         <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
 
