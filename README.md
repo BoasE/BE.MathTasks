@@ -1,7 +1,7 @@
 # BE.MathTasks
 Library for creating mathematical training tasks like arithmetic tasks
 
-##TimesTables 1-10
+## TimesTables 1-10
 All math tasks are annotated. e.g. core task
 ```csharp
  var tables = new SmallTimesTable();
