@@ -10,5 +10,7 @@ namespace BE.MathTasks.TimesTables
         List<MultiplicationTask> RandomTasks(MultiplicationTaskRequest request, int count);
 
         List<MultiplicationTask> AllForTable(int table);
+
+        List<MultiplicationTask> AllForTable(MultiplicationTaskRequest request);
     }
 }

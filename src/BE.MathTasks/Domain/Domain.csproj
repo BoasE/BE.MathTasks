@@ -8,7 +8,7 @@
         <LangVersion>8</LangVersion>
         <Nullable>enable</Nullable>
         <PackageReleaseNotes>Core-Tasks are marked</PackageReleaseNotes>
-        <PackageVersion>0.0.3</PackageVersion>
+        <PackageVersion>0.0.4</PackageVersion>
         <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
 
