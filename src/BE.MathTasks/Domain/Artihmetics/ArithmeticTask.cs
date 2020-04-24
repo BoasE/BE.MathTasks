@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace BE.MathTasks.Artihmetics
@@ -18,12 +19,17 @@ namespace BE.MathTasks.Artihmetics
 
         public ArithmeticTaskProperties Meta { get; }
 
-        public ArithmeticTask(int firstArgument, int secondArgument, ArithmeticOperators op, int solution)
+        public ArithmeticTask(int firstArgument, int secondArgument, ArithmeticOperators op)
+            : base("a" + op.ToSymbol() + "b",
+                new Dictionary<string, double>()
+                {
+                    {"a", firstArgument},
+                    {"b", secondArgument}
+                }, "a" + op.ToSymbol() + "b")
         {
             FirstArgument = firstArgument;
             SecondArgument = secondArgument;
             Operator = op;
-            Solution = solution;
             Expresion = firstArgument + op.ToSymbol() + secondArgument;
             Meta = new ArithmeticTaskProperties(this);
         }
@@ -36,7 +42,8 @@ namespace BE.MathTasks.Artihmetics
                 return false;
             if (ReferenceEquals(this, other))
                 return true;
-            return FirstArgument == other.FirstArgument && SecondArgument == other.SecondArgument && Operator == other.Operator;
+            return FirstArgument == other.FirstArgument && SecondArgument == other.SecondArgument &&
+                   Operator == other.Operator;
         }
 
         public override bool Equals(object obj)
@@ -50,7 +57,7 @@ namespace BE.MathTasks.Artihmetics
             {
                 int hashCode = FirstArgument;
                 hashCode = (hashCode * 397) ^ SecondArgument;
-                hashCode = (hashCode * 397) ^ (int)Operator;
+                hashCode = (hashCode * 397) ^ (int) Operator;
                 return hashCode;
             }
         }

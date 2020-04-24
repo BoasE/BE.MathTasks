@@ -7,9 +7,13 @@
         <PackageIdpopopp>BE.MathTasks</PackageIdpopopp>
         <LangVersion>8</LangVersion>
         <Nullable>enable</Nullable>
-        <PackageReleaseNotes>Core-Tasks are marked</PackageReleaseNotes>
-        <PackageVersion>0.0.4</PackageVersion>
+        <PackageReleaseNotes>Minor reworks</PackageReleaseNotes>
+        <PackageVersion>0.0.5</PackageVersion>
         <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Jace" Version="1.0.0" />
+    </ItemGroup>
 
 </Project>

@@ -25,16 +25,16 @@ namespace Domain.Tests.MultiplicationTaskTests
         public void TextEqualsStringNotationOfTask()
         {
             var sut = GetSut(2, 3);
-            string result = "2 * 3";
+            string result = "2*3";
 
-            Assert.Equal(result, sut.Text);
+            Assert.Equal(result, sut.DisplayValue);
         }
 
         [Fact]
         public void ToStringEqualsText()
         {
             var sut = GetSut(2, 3);
-            Assert.Equal(sut.Text, sut.ToString());
+            Assert.Equal(sut.DisplayValue, sut.ToString());
         }
     }
 }

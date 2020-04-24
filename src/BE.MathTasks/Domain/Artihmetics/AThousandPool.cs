@@ -37,7 +37,7 @@ namespace BE.MathTasks.Artihmetics
 
         private ArithmeticTask Create(int firstArgument, int secondArgument, ArithmeticOperators ops, int solution)
         {
-            return new ArithmeticTask(firstArgument, secondArgument, ops, solution);
+            return new ArithmeticTask(firstArgument, secondArgument, ops);
         }
 
         public List<ArithmeticTask> Resolve(ArithmeticTaskRequest request)
