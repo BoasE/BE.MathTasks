@@ -9,7 +9,7 @@ namespace BE.MathTasks.TimesTables
     public sealed class TimesTableTask : MathTask
     {
 
-        public TimesTableTask(Dictionary<string,double> variables,string displayValue) : base("a*b",variables,displayValue)
+        public TimesTableTask(Dictionary<string,double> variables,string displayValue) : base("a*b",variables,displayValue,ArithmeticOperators.Multiplication)
         {
         }
 

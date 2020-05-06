@@ -25,7 +25,7 @@ namespace BE.MathTasks.Artihmetics
                 {
                     {"a", firstArgument},
                     {"b", secondArgument}
-                }, "a" + op.ToSymbol() + "b")
+                }, "a" + op.ToSymbol() + "b",op)
         {
             FirstArgument = firstArgument;
             SecondArgument = secondArgument;

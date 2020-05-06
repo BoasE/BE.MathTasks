@@ -23,7 +23,7 @@ namespace BE.MathTasks.TimesTables
             {
                 {"a", factorA},
                 {"b", factorB}
-            }, factorA + "*" + factorB)
+            }, factorA + "*" + factorB,ArithmeticOperators.Multiplication)
         {
             
         }

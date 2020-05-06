@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
+using BE.MathTasks.Artihmetics;
 using Jace;
 
 namespace BE.MathTasks
@@ -9,6 +10,7 @@ namespace BE.MathTasks
     {
         private static readonly CalculationEngine engine = new CalculationEngine();
 
+        public ArithmeticOperators Operator { get;  }
         public string Formula { get; }
 
         public double Result { get; }
@@ -17,12 +19,13 @@ namespace BE.MathTasks
 
         public string DisplayValue { get; }
 
-        protected MathTask(string formula, Dictionary<string, double> variables, string displayValue)
+        public MathTask(string formula, Dictionary<string, double> variables, string displayValue,ArithmeticOperators op)
         {
             Variables = variables;
             Formula = formula;
             Result = engine.Calculate(formula, variables);
             DisplayValue = displayValue;
+            Operator = op;
         }
 
         public override string ToString()
