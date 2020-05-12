@@ -11,8 +11,6 @@ namespace BE.MathTasks.Artihmetics
 
         public int SecondArgument { get; }
 
-        public ArithmeticOperators Operator { get; }
-
         public int Solution { get; }
 
         public string Expresion { get; }
@@ -29,7 +27,6 @@ namespace BE.MathTasks.Artihmetics
         {
             FirstArgument = firstArgument;
             SecondArgument = secondArgument;
-            Operator = op;
             Expresion = firstArgument + op.ToSymbol() + secondArgument;
             Meta = new ArithmeticTaskProperties(this);
         }
