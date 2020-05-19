@@ -5,7 +5,7 @@ using BE.MathTasks.Artihmetics;
 
 namespace BE.MathTasks.TimesTables
 {
-    [DebuggerDisplay("{Text}")]
+    [DebuggerDisplay("{DisplayValue}")]
     public sealed class MultiplicationTask : MathTask
     {
         public int A => (int) Variables["a"];

@@ -7,8 +7,8 @@
         <PackageIdpopopp>BE.MathTasks</PackageIdpopopp>
         <LangVersion>8</LangVersion>
         <Nullable>enable</Nullable>
-        <PackageReleaseNotes>Minor reworks</PackageReleaseNotes>
-        <PackageVersion>0.0.7</PackageVersion>
+        <PackageReleaseNotes>Minor bugfix in debuggerdisplay</PackageReleaseNotes>
+        <PackageVersion>0.0.8</PackageVersion>
         <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
 
