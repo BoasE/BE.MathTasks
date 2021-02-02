@@ -27,5 +27,9 @@ namespace BE.MathTasks.TimesTables
         {
             
         }
+        
+        #region equals
+        
+        #endregion
     }
 }
