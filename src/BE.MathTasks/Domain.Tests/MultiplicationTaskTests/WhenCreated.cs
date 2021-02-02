@@ -18,7 +18,7 @@ namespace Domain.Tests.MultiplicationTaskTests
         {
             var sut = GetSut(2, 3);
 
-            Assert.Equal(6, sut.Result);
+            Assert.Equal(6, sut.Solution);
         }
 
         [Fact]
@@ -27,7 +27,7 @@ namespace Domain.Tests.MultiplicationTaskTests
             var sut = GetSut(2, 3);
             string result = "2*3";
 
-            Assert.Equal(result, sut.DisplayValue);
+            Assert.Equal(result, sut.Expresion);
         }
 
         [Fact]

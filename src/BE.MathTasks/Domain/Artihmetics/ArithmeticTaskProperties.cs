@@ -15,9 +15,10 @@ namespace BE.MathTasks.Artihmetics
 
         public ArithmeticTaskProperties(ArithmeticTask task)
         {
-            CrossingTenBoundery = !(task.A.GetTens() == task.B.GetTens() && task.B.GetTens() == task.Solution.GetTens());
-            MaxValue = Math.Max(Math.Max(task.A, task.B), task.Solution);
-            MinValue = Math.Min(Math.Min(task.A, task.B), task.Solution);
+            CrossingTenBoundery =
+                !(task.A.GetTens() == task.B.GetTens() && task.B.GetTens() == task.Solution.GetTens());
+            MaxValue = Math.Max(Math.Max(task.A, task.B), (int) task.Solution);
+            MinValue = Math.Min(Math.Min(task.A, task.B), (int) task.Solution);
         }
     }
 }

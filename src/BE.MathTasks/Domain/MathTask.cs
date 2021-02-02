@@ -15,7 +15,7 @@ namespace BE.MathTasks
 
         public string Formula { get; }
 
-        public double Result { get; }
+        public double Solution { get; }
 
         public Dictionary<string, double> Variables { get; }
 
@@ -26,7 +26,7 @@ namespace BE.MathTasks
         {
             Variables = variables;
             Formula = formula;
-            Result = engine.Calculate(formula, variables);
+            Solution = engine.Calculate(formula, variables);
             DisplayValue = displayValue;
             Operator = op;
         }

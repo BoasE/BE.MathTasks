@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 
 namespace BE.MathTasks.Artihmetics
 {
@@ -14,6 +15,14 @@ namespace BE.MathTasks.Artihmetics
                 ArithmeticOperators.Divison => "/",
                 _ => throw new ArgumentOutOfRangeException(nameof(operators), operators, null)
             };
+        }
+
+        public static string ToDisplaySymbol(this ArithmeticOperators operators)
+        {
+            string op = ToSymbol(operators)
+                .Replace("/", "÷").Replace("*", "×");
+
+            return op;
         }
     }
 }

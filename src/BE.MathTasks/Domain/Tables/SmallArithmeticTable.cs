@@ -21,7 +21,7 @@ namespace BE.MathTasks.Tables
         {
             for (int i = 0; i <= 10; i++)
             {
-                yield return new ArithmeticTask(table, i, @operator);
+                yield return new ArithmeticTask( i,table, @operator);
             }
         }
 

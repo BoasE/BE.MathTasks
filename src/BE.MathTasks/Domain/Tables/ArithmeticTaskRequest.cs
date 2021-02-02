@@ -11,6 +11,7 @@ namespace BE.MathTasks.Tables
         public ISet<int> Tables { get; }
 
         public bool AllowTimes1 { get; private set; } = true;
+        public bool AllowTimes0 { get; private set; } = false;
 
         private ArithmeticTaskRequest(ArithmeticOperators @operator)
         {

@@ -7,7 +7,7 @@ namespace Domain.Tests.RandomNumberTests
 {
     public sealed class GivenRandomNumber
     {
-        protected RandomNumbers Numbers { get; } = new RandomNumbers();
+        private RandomNumbers Numbers { get; } = new RandomNumbers();
 
         [Theory]
         [InlineData(1), InlineData(2), InlineData(5), InlineData(99), InlineData(1213),]

@@ -5,10 +5,10 @@
         <AssemblyName>BE.MathTasks</AssemblyName>
         <RootNamespace>BE.MathTasks</RootNamespace>
         <PackageIdpopopp>BE.MathTasks</PackageIdpopopp>
-        <LangVersion>8</LangVersion>
+        <LangVersion>9</LangVersion>
         <Nullable>enable</Nullable>
-        <PackageReleaseNotes>Minor bugfix in debuggerdisplay</PackageReleaseNotes>
-        <PackageVersion>0.0.8</PackageVersion>
+        <PackageReleaseNotes>Arithmictable rework</PackageReleaseNotes>
+        <PackageVersion>0.1.0</PackageVersion>
         <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
 

@@ -2,18 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using BE.MathTasks.Artihmetics;
-using BE.MathTasks.Tables;
 
 namespace BE.MathTasks
 {
     [DebuggerDisplay("{Expresion}")]
-    public sealed class ArithmeticTask : MathTask, IEquatable<ArithmeticTask>
+    public class ArithmeticTask : MathTask, IEquatable<ArithmeticTask>
     {
         public int A { get; }
 
         public int B { get; }
-
-        public int Solution { get; }
 
         public string Expresion { get; }
 
@@ -25,7 +22,7 @@ namespace BE.MathTasks
                 {
                     {"a", firstArgument},
                     {"b", secondArgument}
-                }, "a" + op.ToSymbol() + "b", op)
+                }, firstArgument + op.ToDisplaySymbol() + secondArgument, op)
         {
             A = firstArgument;
             B = secondArgument;
