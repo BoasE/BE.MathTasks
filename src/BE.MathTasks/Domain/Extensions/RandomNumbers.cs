@@ -1,7 +1,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace BE.MathTasks
+namespace BE.MathTasks.Extensions
 {
     public sealed class RandomNumbers
     {

@@ -1,4 +1,4 @@
-namespace BE.MathTasks
+namespace BE.MathTasks.Extensions
 {
     public static class NumberExtensions
     {

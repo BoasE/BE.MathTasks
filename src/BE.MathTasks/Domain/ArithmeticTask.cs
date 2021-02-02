@@ -1,15 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using BE.MathTasks.Artihmetics;
+using BE.MathTasks.Tables;
 
-namespace BE.MathTasks.Artihmetics
+namespace BE.MathTasks
 {
     [DebuggerDisplay("{Expresion}")]
     public sealed class ArithmeticTask : MathTask, IEquatable<ArithmeticTask>
     {
-        public int FirstArgument { get; }
+        public int A { get; }
 
-        public int SecondArgument { get; }
+        public int B { get; }
 
         public int Solution { get; }
 
@@ -23,12 +25,17 @@ namespace BE.MathTasks.Artihmetics
                 {
                     {"a", firstArgument},
                     {"b", secondArgument}
-                }, "a" + op.ToSymbol() + "b",op)
+                }, "a" + op.ToSymbol() + "b", op)
         {
-            FirstArgument = firstArgument;
-            SecondArgument = secondArgument;
+            A = firstArgument;
+            B = secondArgument;
             Expresion = firstArgument + op.ToSymbol() + secondArgument;
             Meta = new ArithmeticTaskProperties(this);
+        }
+
+        public MultiplicationTask AsMultiplication()
+        {
+            return new MultiplicationTask(A, B);
         }
 
         #region equals
@@ -39,7 +46,7 @@ namespace BE.MathTasks.Artihmetics
                 return false;
             if (ReferenceEquals(this, other))
                 return true;
-            return FirstArgument == other.FirstArgument && SecondArgument == other.SecondArgument &&
+            return A == other.A && B == other.B &&
                    Operator == other.Operator;
         }
 
@@ -52,8 +59,8 @@ namespace BE.MathTasks.Artihmetics
         {
             unchecked
             {
-                int hashCode = FirstArgument;
-                hashCode = (hashCode * 397) ^ SecondArgument;
+                int hashCode = A;
+                hashCode = (hashCode * 397) ^ B;
                 hashCode = (hashCode * 397) ^ (int) Operator;
                 return hashCode;
             }

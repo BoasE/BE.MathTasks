@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BE.MathTasks
+namespace BE.MathTasks.Extensions
 {
     internal static class RandomCollectionExtenstions
     {

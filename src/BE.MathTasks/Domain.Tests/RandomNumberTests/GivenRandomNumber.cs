@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using BE.MathTasks;
+using BE.MathTasks.Extensions;
 using Xunit;
 
 namespace Domain.Tests.RandomNumberTests

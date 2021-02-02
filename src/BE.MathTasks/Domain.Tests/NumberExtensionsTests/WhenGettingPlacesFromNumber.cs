@@ -1,4 +1,5 @@
 using BE.MathTasks;
+using BE.MathTasks.Extensions;
 using Xunit;
 
 namespace Domain.Tests.NumberExtensionsTests

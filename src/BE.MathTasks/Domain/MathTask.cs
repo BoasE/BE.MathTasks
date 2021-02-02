@@ -11,7 +11,8 @@ namespace BE.MathTasks
     {
         private static readonly CalculationEngine engine = new CalculationEngine();
 
-        public ArithmeticOperators Operator { get;  }
+        public ArithmeticOperators Operator { get; }
+
         public string Formula { get; }
 
         public double Result { get; }
@@ -20,7 +21,8 @@ namespace BE.MathTasks
 
         public string DisplayValue { get; }
 
-        public MathTask(string formula, Dictionary<string, double> variables, string displayValue,ArithmeticOperators op)
+        public MathTask(string formula, Dictionary<string, double> variables, string displayValue,
+            ArithmeticOperators op)
         {
             Variables = variables;
             Formula = formula;

@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
+using BE.MathTasks.Artihmetics;
 
-namespace BE.MathTasks.TimesTables
+namespace BE.MathTasks.Tables
 {
     public static class MultiplicationTaskFilter
     {
-        public static IEnumerable<MultiplicationTask> FilterByRequest(this IEnumerable<MultiplicationTask> tasks,
-            MultiplicationTaskRequest request)
+        public static IEnumerable<ArithmeticTask> FilterByRequest(this IEnumerable<ArithmeticTask> tasks,
+            ArithmeticTaskRequest request)
         {
             tasks = tasks.Where(x => request.Tables.Contains(x.B));
             if (!request.AllowTimes1)

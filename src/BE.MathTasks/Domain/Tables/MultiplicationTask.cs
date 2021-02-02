@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using BE.MathTasks.Artihmetics;
 
-namespace BE.MathTasks.TimesTables
+namespace BE.MathTasks.Tables
 {
     [DebuggerDisplay("{DisplayValue}")]
     public sealed class MultiplicationTask : MathTask

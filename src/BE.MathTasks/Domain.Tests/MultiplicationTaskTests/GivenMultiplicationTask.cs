@@ -1,4 +1,4 @@
-using BE.MathTasks.TimesTables;
+using BE.MathTasks.Tables;
 
 namespace Domain.Tests.MultiplicationTaskTests
 {
