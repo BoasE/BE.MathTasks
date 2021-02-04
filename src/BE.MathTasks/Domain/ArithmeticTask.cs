@@ -16,6 +16,12 @@ namespace BE.MathTasks
 
         public ArithmeticTaskProperties Meta { get; }
 
+        /// <summary>
+        /// Core Task is very important task with can be used to
+        /// </summary>
+        /// <returns></returns>
+        public bool IsCoreTask { get; }
+
         public ArithmeticTask(int firstArgument, int secondArgument, ArithmeticOperators op)
             : base("a" + op.ToSymbol() + "b",
                 new Dictionary<string, double>()
@@ -28,11 +34,30 @@ namespace BE.MathTasks
             B = secondArgument;
             Expresion = firstArgument + op.ToSymbol() + secondArgument;
             Meta = new ArithmeticTaskProperties(this);
+
+            if (op == ArithmeticOperators.Multiplication)
+            {
+                IsCoreTask = IsCoreTaskNumber(A);
+            }
+            else if (op == ArithmeticOperators.Divison)
+            {
+                IsCoreTask = IsCoreTaskNumber((int) Solution) || IsCoreTaskNumber(B);
+            }
+        }
+
+        private static bool IsCoreTaskNumber(int number)
+        {
+            return number == 2 || number == 5 || number == 10;
         }
 
         public MultiplicationTask AsMultiplication()
         {
-            return new MultiplicationTask(A, B);
+            return new(A, B);
+        }
+
+        public DivisionTask AsDivision()
+        {
+            return new(A, B);
         }
 
         #region equals

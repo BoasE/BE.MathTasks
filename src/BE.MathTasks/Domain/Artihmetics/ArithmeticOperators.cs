@@ -2,10 +2,9 @@ namespace BE.MathTasks.Artihmetics
 {
     public enum ArithmeticOperators
     {
-        Addition = 1,
-        Subtraction = 2,
-        Multiplication = 3,
-        Divison = 4,
-        None = 0
+        Addition = 0,
+        Subtraction = 1,
+        Multiplication = 2,
+        Divison = 3
     }
 }

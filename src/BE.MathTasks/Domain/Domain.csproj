@@ -7,8 +7,8 @@
         <PackageIdpopopp>BE.MathTasks</PackageIdpopopp>
         <LangVersion>9</LangVersion>
         <Nullable>enable</Nullable>
-        <PackageReleaseNotes>Arithmictable rework</PackageReleaseNotes>
-        <PackageVersion>0.1.0</PackageVersion>
+        <PackageReleaseNotes>Coretask for divisions</PackageReleaseNotes>
+        <PackageVersion>0.1.5</PackageVersion>
         <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
 

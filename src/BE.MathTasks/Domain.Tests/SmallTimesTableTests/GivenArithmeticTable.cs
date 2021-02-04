@@ -18,7 +18,7 @@ namespace Domain.Tests.SmallTimesTableTests
          InlineData(6), InlineData(7), InlineData(8), InlineData(9), InlineData(10)]
         public void SecondFactorEqualsTable(int table)
         {
-            var task = GetSut().RandomTask(ArithmeticTaskRequest.ForTable(ArithmeticOperators.Multiplication, table));
+            var task = GetSut().RandomTask(ArithmeticTaskRequest.ForTable(table));
 
             Assert.Equal(table, task.B);
         }
@@ -28,7 +28,7 @@ namespace Domain.Tests.SmallTimesTableTests
          InlineData(6), InlineData(7), InlineData(8), InlineData(9), InlineData(10)]
         public void GetMultipleRequests(int table)
         {
-            var task = GetSut().RandomTasks(ArithmeticTaskRequest.ForTable(ArithmeticOperators.Multiplication, table),
+            var task = GetSut().RandomTasks(ArithmeticTaskRequest.ForTable(table),
                 4);
 
             Assert.Equal(4, task.Count);
